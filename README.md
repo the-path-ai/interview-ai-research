@@ -34,4 +34,6 @@ At the end of the session, your system will be run against a held-out set of 10 
 
 ## You decide
 
-Prompts, architecture, memory, retrieval, eval rigor, training data sketches, per-turn credit assignment, whatever you think moves the needle most. Ship and defend your choices.
+Prompts, architecture, memory, retrieval, eval rigor, simulating data, credit assignment, whatever you think moves the needle most. Ship and defend your choices.
+
+There is certainly no "correct answer" to this interview, by any means. You should use ALL tools at your disposal. There's no way to cheat.
