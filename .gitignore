@@ -1,4 +1,5 @@
 .env
+encrypt_env.sh
 __pycache__/
 *.pyc
 .venv/
