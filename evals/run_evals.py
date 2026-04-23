@@ -34,6 +34,7 @@ def load_conversations(path: Path = DATA_PATH):
 def main():
     console = Console()
     conversations = load_conversations()
+    console.print(f"[bold]Loaded {len(conversations)} conversations[/bold]")
 
     table = Table(title=f"Starter Eval ({len(conversations)} conversations)")
     table.add_column("id")
@@ -41,7 +42,8 @@ def main():
         table.add_column(name)
 
     totals = {name: 0 for name in CHECKS}
-    for conv in conversations:
+    for i, conv in enumerate(conversations, 1):
+        console.print(f"[dim]Running conversation {i}/{len(conversations)}: {conv['id']}[/dim]")
         user_msg = last_user_message(conv["turns"])
         reply = respond(user_msg)
         row = [conv["id"]]
