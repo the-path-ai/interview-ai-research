@@ -5,9 +5,9 @@ Our AI therapist isn't good enough. Your job: **make it meaningfully better in 6
 ## Rules
 
 - Use any tools, libraries, and AI assistants you want.
-- Bring your own API keys (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, whatever). Export them as env vars before running.
-- Ship something runnable. Don't leave it half-broken.
+- Run `bash setup.sh` using the decryption password provided to get API keys loaded
 - Think out loud.
+- Narrow in on a few promising ideas and actually implement something.
 
 ## What's in the repo
 
@@ -17,11 +17,18 @@ Our AI therapist isn't good enough. Your job: **make it meaningfully better in 6
 - `scripts/chat.py` — talk to the agent interactively
 - `scripts/score.py` — score a single conversation by id
 
+## Setup
+
+```bash
+bash setup.sh                    # loads API keys (use the decryption password provided)
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## Sanity check
 
 ```bash
-pip install -r requirements.txt
-export OPENAI_API_KEY=sk-...
 python evals/run_evals.py        # runs the starter eval over all 25 conversations
 python scripts/chat.py           # talk to the agent
 ```
